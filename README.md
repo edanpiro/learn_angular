@@ -1,4 +1,4 @@
-lear_angular
+learn_angular
 ============
 
 the first step angular
