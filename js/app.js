@@ -12,7 +12,16 @@
       {id:2, name:'HTML5 Games', url:'https://html5gamedevs.com', category:'Games'},
       {id:3, name:'CSS Tricks', url:'http://css-tricks.com', category:'CSS'},
       {id:4, name:'Bootstrap', url:'http://getbootstrap.com', category:'CSS'}
-    ]
+    ];
+
+    $scope.category = null;
+    $scope.setcategory = function(category){
+      $scope.category = category
+    }
+    $scope.iscategory = function(category){
+      return $scope.category === category;
+    }
+    
   });
 
 

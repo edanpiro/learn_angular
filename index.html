@@ -8,10 +8,12 @@
       <p><input ng-model="name" type="text"/></p>
     </div>
     <ul>
-      <li ng-repeat='category in categories'>{{category}}</li>
+      <li ng-repeat="category in categories" ng-class="{active: iscategory(category)}">
+        <a href="#" ng-click="setcategory(category)">{{category}}</a>
+      </li>
     </ul>
     <ul>
-      <li ng-repeat="bookmark in bookmarks">
+      <li ng-repeat="bookmark in bookmarks | filter: {category: category}">
         <p>
           <a href="{{bookmark.url}}">{{bookmark.name}}</a><br/>
           <small>{{bookmark.url}}</small>
